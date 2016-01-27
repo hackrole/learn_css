@@ -1,0 +1,42 @@
+@import global_var
+
+$body-font-size: 1.4em
+
+$nav-bg-color: #8BD400
+$nav-bd-color: #486B02
+$nav-item-color: #2B3F00
+$nav-item-bd-color: #E4FFD3
+$nav-item-bdb-color: #486B02
+$nav-item-active-color: #E4FFD3
+$nav-item-active-bg-color: #6DA203
+
+
+body
+    font-family: $body-font-family
+    font-size: $body-font-size
+
+ul.nav
+    margin: 0
+    padding: 0
+    width: 8em
+    float: left
+    list-style-type: none
+    background-color: $nav-bg-color
+    border: 1px solid $nav-bd-color
+    border-bottom: none
+
+    li
+        display: inline
+
+    a
+        display: block
+        color: $nav-item-color
+        text-decoration: none
+        border-top: 1px solid $nav-item-bd-color
+        border-bottom: 1px solid $nav-item-bdb-color
+        background: url(img/arrow.gif) no-repeat 5% 50%
+        padding: 0.3em 1em
+
+    a:hover, a:focus, .selected a
+        color: $nav-item-active-color
+        background-color: $nav-item-active-bg-color
