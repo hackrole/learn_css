@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+  <style>
+    body {
+      font: 62.5%/1 "MyRiad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+    }
+    form {
+      font-size: 1.4em;
+      width: 30em;
+    }
+    fieldset {
+      margin: 1em 0;
+      padding: 1em;
+      border: 1px solid #ccc;
+    }
+    legend {
+      font-weight: bold;
+    }
+    form div {
+      padding: 0.4em 0;
+    }
+    label {
+      display: block;
+    }
+    label .required {
+      font-size: 0.75em;
+      color: #760000;
+    }
+    input {
+      width: 20em;
+    }
+    textarea {
+      width: 100%;
+      height: 10em;
+    }
+    input.radio, input.submit {
+      width: auto;
+    }
+    #remember-me .radio {
+      margin-right: 1em;
+    }
+    input[type='text']:focus, textarea:focus {
+      background: #ffc;
+    }
+  </style>
+</head>
+<body>
+  <form id="comments_form" action="#" method="post">
+    <fieldset>
+      <legend>Your contact Details</legend>
+      <div>
+        <label for="author">Name: <em class="required">(Required)</em></label>
+        <input id="author" type="text" name="author" />
+      </div>
+      <div>
+        <label for="email">Email Address:</label>
+        <input id="email" type="text" name="email" />
+      </div>
+      <div>
+        <label for="url">Web Address:</label>
+        <input id="url" type="text" name="url" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Comments</legend>
+      <div>
+        <label for="text">Message: <em class="required">(Required)</em></label>
+        <textarea id="text" name="text" cols="20" rows="10"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset id="remember-me">
+      <legend>Remember me</legend>
+      <div>
+        <label for="remember-yes"><input id="remember-yes" class="radio" type="radio" name="remember" value="yes" /></label>
+      </div>
+      <div>
+        <label for="remember-no"><input id="remember-no" class="radio" name="remember" type="radio" value="no" checked="checked" />No</label>
+      </div>
+    </fieldset>
+    <div>
+      <input id="submit" class="submit" name="submit" type="submit"/>
+    </div>
+  </form>
+</body>
+</html>
